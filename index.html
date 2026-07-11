@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Oscar Canizales — a San Diego–based computer engineer working on computer systems, cloud infrastructure, and hardware–software integration." />
+<meta name="author" content="Oscar Luis Canizales" />
+<title>Oscar Canizales</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.82em' font-size='84' font-family='Georgia,serif'>o</text></svg>" />
+
+<!--
+  Oscar Canizales — personal portfolio.
+  Technical / spec-sheet aesthetic. Dark neutral-slate, monochrome.
+  Geist (headings + prose) + Geist Mono (all metadata). Graph-paper
+  dot grid, numeric indices. Hand-written HTML / CSS / vanilla JS.
+-->
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<header class="topbar" id="top">
+  <div class="shell topbar__inner">
+    <a class="topbar__name" href="#top">Oscar&nbsp;Canizales</a>
+    <nav class="topbar__nav" aria-label="Primary">
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a class="topbar__cta" href="#contact">Work with me</a>
+    </nav>
+    <button class="topbar__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================ INTRO ============================ -->
+  <section class="intro shell">
+    <p class="intro__eyebrow" data-reveal>Computer&nbsp;systems · cloud&nbsp;infrastructure · web&nbsp;&amp;&nbsp;digital</p>
+
+    <h1 class="intro__name" data-reveal>Oscar Canizales</h1>
+
+    <p class="intro__body" data-reveal>
+      I&#8217;m Oscar &#8212; a San&nbsp;Diego&#8211;based computer engineer who&#8217;s happiest when the
+      systems stay up. These days I teach kids robotics and circuits at
+      <a href="#work" class="ln">Brains&nbsp;and&nbsp;Motion</a>, and keep the lab stocked and the
+      schematics honest as a <a href="#work" class="ln">project&#8209;space officer</a> with IEEE at
+      UC&nbsp;San&nbsp;Diego. Before that I ran end&#8209;to&#8209;end IT for
+      <a href="#work" class="ln">Prime&nbsp;Networks</a>. On my own time I build
+      <a href="#proj-3" class="ln">AI lead&#8209;generation tools</a>,
+      <a href="#proj-1" class="ln">quant trading bots</a>, and
+      <a href="#proj-2" class="ln">self&#8209;host my own infrastructure</a> on a small pile of
+      Raspberry&nbsp;Pis &#8212; and I don&#8217;t trust a system until I&#8217;ve watched it break.
+      <span class="intro__aside">I like my commits small, my servers quiet, and my documentation actually written.</span>
+    </p>
+
+    <div class="intro__meta" data-reveal>
+      <span>Currently transferring &#183; Computer&nbsp;Engineering (ADT)</span>
+      <a href="#contact" class="intro__link">Get in touch <span aria-hidden="true">&#8594;</span></a>
+    </div>
+  </section>
+
+  <!-- ============================ EXPERIENCE (year lists) ============================ -->
+  <section class="section shell" id="experience" data-reveal>
+    <div class="section__head">
+      <p class="section__kick"><b>01</b> / EXPERIENCE</p>
+      <h2 class="section__title">A little history.</h2>
+      <p class="section__note">Roles where uptime, documentation, and people all had to hold at once. Tap a row for detail.</p>
+    </div>
+
+    <div class="tracks">
+      <!-- Work track -->
+      <div class="track" id="work">
+        <h3 class="track__label">Work</h3>
+        <ul class="ylist">
+
+          <li class="yrow" data-exp>
+            <button class="yrow__btn" aria-expanded="false" aria-controls="exp-1">
+              <span class="yrow__year">2023&#8211;25</span>
+              <span class="yrow__what"><b>Prime Networks</b><span class="yrow__role">Owner &amp; Lead IT Specialist</span></span>
+              <span class="yrow__plus" aria-hidden="true"></span>
+            </button>
+            <div class="yrow__detail" id="exp-1" role="region">
+              <div class="yrow__detailinner">
+                <ul>
+                  <li>Ran end-to-end technical operations, balancing client relationships with day-to-day system administration.</li>
+                  <li>Isolated hardware and network faults through systematic diagnostics, performing critical repairs to hold system uptime.</li>
+                  <li>Authored authoritative documentation of procedures and configurations for multi-user operations.</li>
+                  <li>Marketed IT services and secured contracts for hardware and network diagnostics.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="yrow" data-exp>
+            <button class="yrow__btn" aria-expanded="false" aria-controls="exp-2">
+              <span class="yrow__year">2026</span>
+              <span class="yrow__what"><b>Brains and Motion Education</b><span class="yrow__role">STEM Instructor</span></span>
+              <span class="yrow__plus" aria-hidden="true"></span>
+            </button>
+            <div class="yrow__detail" id="exp-2" role="region">
+              <div class="yrow__detailinner">
+                <ul>
+                  <li>Instruct students in robotics and electrical principles, translating complex ideas into practical lessons.</li>
+                  <li>Guide hardware-prototyping workshops and mentor students through circuit troubleshooting.</li>
+                  <li>Manage laboratory inventory and logistics for engineering project materials.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="yrow" data-exp>
+            <button class="yrow__btn" aria-expanded="false" aria-controls="exp-3">
+              <span class="yrow__year">2026</span>
+              <span class="yrow__what"><b>IEEE at UC San Diego</b><span class="yrow__role">Project Space Officer</span></span>
+              <span class="yrow__plus" aria-hidden="true"></span>
+            </button>
+            <div class="yrow__detail" id="exp-3" role="region">
+              <div class="yrow__detailinner">
+                <ul>
+                  <li>Oversee laboratory project-space infrastructure, maintaining component inventories and equipment availability for student projects.</li>
+                  <li>Provide technical guidance to peer engineers &#8212; schematic debugging and component selection.</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <!-- Learning track -->
+      <div class="track">
+        <h3 class="track__label">Learning &amp; certifications</h3>
+        <ul class="ylist ylist--plain">
+          <li class="yrow yrow--static">
+            <span class="yrow__year">2024&#8211;28</span>
+            <span class="yrow__what"><b>UC San Diego</b><span class="yrow__role">Computer Engineering &#8212; ADT transfer path</span></span>
+          </li>
+          <li class="yrow yrow--static">
+            <span class="yrow__year">2025</span>
+            <span class="yrow__what"><b>Qualcomm</b><span class="yrow__role">AI Upskilling: Technical Foundations</span></span>
+          </li>
+          <li class="yrow yrow--static">
+            <span class="yrow__year">2024</span>
+            <span class="yrow__what"><b>Calexico High School</b><span class="yrow__role">CTE: Marketing, Sales &amp; Services &#183; Entrepreneurship</span></span>
+          </li>
+          <li class="yrow yrow--static">
+            <span class="yrow__year">&#8212;</span>
+            <span class="yrow__what"><b>Alison</b><span class="yrow__role">Diploma for Electrical Studies (verified)</span></span>
+          </li>
+          <li class="yrow yrow--static">
+            <span class="yrow__year">now</span>
+            <span class="yrow__what"><b>Reinforcement learning for trading</b><span class="yrow__role">Self-directed &#8212; Gymnasium + PPO, walk-forward validation</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ PROJECTS ============================ -->
+  <section class="section shell" id="projects" data-reveal>
+    <div class="section__head">
+      <p class="section__kick"><b>02</b> / PROJECTS</p>
+      <h2 class="section__title">Things I&#8217;ve built.</h2>
+      <p class="section__note">Systems I run and client sites I&#8217;ve shipped. Open one for the details.</p>
+    </div>
+
+    <div class="pgroup">
+      <p class="pgroup__label">Systems &amp; software</p>
+      <ul class="projects">
+
+        <!-- 01 -->
+        <li class="project" id="proj-1" data-project="1">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-1-detail">
+            <span class="project__no">01</span>
+            <span class="project__titles">
+              <span class="project__titlerow"><span class="project__title">Automated Quantitative Trading Bots</span></span>
+              <span class="project__tag">Python quant stack spanning Polymarket prediction markets and a separate stocks/futures engine</span>
+            </span>
+            <span class="project__plus" aria-hidden="true"></span>
+          </button>
+          <div class="project__detail" id="proj-1-detail" role="region" aria-label="Automated Quantitative Trading Bots">
+            <div class="project__grid">
+              <div class="project__prose">
+                <h4>Problem</h4>
+                <p>Fast prediction markets and futures punish slow, emotion-driven decisions. I wanted execution that was systematic and backtested, with every strategy proven out before it saw real capital.</p>
+                <h4>Approach</h4>
+                <p>Built two engines in Python: one trading Polymarket BTC up/down markets with a statistical-arbitrage layer, the other running stocks and futures through the Webull OpenAPI on Lucid/Rithmic data feeds. Both share whale-tracking, live dashboards, and a walk-forward backtester plus optimizer that validates a strategy before any capital is committed.</p>
+                <h4>Results</h4>
+                <ul>
+                  <li>Best validated momentum combo returned <b>+0.72R</b> per trade with a <b>2.55 profit factor</b> in walk-forward testing.</li>
+                  <li>An 8-year walk-forward flagged the statistical-arbitrage strategies as non-robust, so they were kept to <b>paper trading only</b>.</li>
+                  <li>Two independent engines run off one shared validation and dashboard layer, so no strategy goes live unvalidated.</li>
+                </ul>
+              </div>
+              <div class="project__aside">
+                <div class="ph" role="img" aria-label="Placeholder: strategy to walk-forward validation to live execution"><span>Placeholder — Strategy → walk-forward validation → live execution</span></div>
+                <p class="project__stack">Python · Polymarket API · Webull OpenAPI · Statistical arbitrage · Backtesting</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 02 -->
+        <li class="project" id="proj-2" data-project="2">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-2-detail">
+            <span class="project__no">02</span>
+            <span class="project__titles">
+              <span class="project__titlerow"><span class="project__title">Self-Hosted Infrastructure</span></span>
+              <span class="project__tag">Fedora and Raspberry Pi homelab — self-hosted services behind a reverse proxy, monitored and backed up</span>
+            </span>
+            <span class="project__plus" aria-hidden="true"></span>
+          </button>
+          <div class="project__detail" id="proj-2-detail" role="region" aria-label="Self-Hosted Infrastructure">
+            <div class="project__grid">
+              <div class="project__prose">
+                <h4>Problem</h4>
+                <p>I wanted always-on private services that I fully owned, and a real environment to learn cloud fundamentals rather than a sandbox that resets when I close it.</p>
+                <h4>Approach</h4>
+                <p>Built a homelab on Fedora Linux with Raspberry Pi nodes, running self-hosted services behind a reverse proxy. Added monitoring and automated backups, and treated the whole setup as documented, reproducible infrastructure.</p>
+                <h4>Results</h4>
+                <ul>
+                  <li>Always-on private services with end-to-end system-administration ownership.</li>
+                  <li>A live sandbox for cloud fundamentals — networking, uptime, and diagnostics under real load.</li>
+                </ul>
+              </div>
+              <div class="project__aside">
+                <div class="ph" role="img" aria-label="Placeholder: homelab topology"><span>Placeholder — Homelab topology</span></div>
+                <p class="project__stack">Fedora Linux · Raspberry Pi · System administration · Networking · Bash</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 03 -->
+        <li class="project" id="proj-3" data-project="3">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-3-detail">
+            <span class="project__no">03</span>
+            <span class="project__titles">
+              <span class="project__titlerow"><span class="project__title">Leadscout</span></span>
+              <span class="project__tag">AI lead-gen for a web-design business, self-hosted on localhost:8820</span>
+            </span>
+            <span class="project__plus" aria-hidden="true"></span>
+          </button>
+          <div class="project__detail" id="proj-3-detail" role="region" aria-label="Leadscout">
+            <div class="project__grid">
+              <div class="project__prose">
+                <h4>Problem</h4>
+                <p>Selling web design means finding the businesses that don't have a website yet, which are exactly the prospects that are hardest to surface by hand. I wanted a tool that pulled them automatically and told me which ones were actually worth contacting.</p>
+                <h4>Approach</h4>
+                <p>Built a FastAPI and SQLite service with a vanilla-JavaScript dashboard that pulls candidate businesses from Google Places, OpenStreetMap, and Reddit. An LLM (Claude) identifies and qualifies the ones with no website and streamlines the outreach step. Runs locally on port 8820.</p>
+                <h4>Results</h4>
+                <ul>
+                  <li>Merges three independent sources (Google Places, OpenStreetMap, Reddit) into one qualified lead list.</li>
+                  <li>Uses Claude to flag no-website prospects and prep outreach, so I contact only real leads.</li>
+                  <li>Productized version of my earlier AI-powered lead-generation system.</li>
+                </ul>
+              </div>
+              <div class="project__aside">
+                <div class="ph" role="img" aria-label="Placeholder: sources to LLM qualify to dashboard"><span>Placeholder — Sources → LLM qualify → dashboard</span></div>
+                <p class="project__stack">Python · FastAPI · SQLite · JavaScript · Google Places API · Claude/LLM</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 04 -->
+        <li class="project" id="proj-4" data-project="4">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-4-detail">
+            <span class="project__no">04</span>
+            <span class="project__titles">
+              <span class="project__titlerow"><span class="project__title">Client CRM</span><span class="status">In progress</span></span>
+              <span class="project__tag">Contacts, deal stages, and follow-ups for my IT and web-design work</span>
+            </span>
+            <span class="project__plus" aria-hidden="true"></span>
+          </button>
+          <div class="project__detail" id="proj-4-detail" role="region" aria-label="Client CRM">
+            <div class="project__grid">
+              <div class="project__prose">
+                <h4>Problem</h4>
+                <p>My IT and web-design clients live scattered across email threads, notes, and the Leadscout lead pipeline, with no single place to track who needs a follow-up. I wanted one system for contacts, deal stages, and reminders that the Leadscout lead flow could feed into directly.</p>
+                <h4>Approach</h4>
+                <p>A self-built CRM on the same stack I use across these projects: a FastAPI backend over a SQL datastore, with a lightweight JavaScript frontend. The core model is contacts, deal stages, notes, and reminders, so a lead can move from first contact to closed work in one place. Leadscout is meant to write new leads straight in, rather than dumping them somewhere I have to re-key by hand.</p>
+                <h4>Goals</h4>
+                <ul>
+                  <li>Will give the Leadscout lead flow a home, turning raw leads into tracked contacts and deal stages.</li>
+                  <li>Aims to centralize follow-ups, notes, and reminders so client work stops slipping between tools.</li>
+                  <li>Will run self-hosted on the same Python / FastAPI / SQL stack as the rest of the portfolio.</li>
+                </ul>
+              </div>
+              <div class="project__aside">
+                <div class="ph" role="img" aria-label="Placeholder: leads to contacts to deals to follow-ups"><span>Placeholder — Leads → contacts → deals → follow-ups</span></div>
+                <p class="project__stack">Python · FastAPI · SQL · JavaScript</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 05 -->
+        <li class="project" id="proj-5" data-project="5">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-5-detail">
+            <span class="project__no">05</span>
+            <span class="project__titles">
+              <span class="project__titlerow"><span class="project__title">Automated Video Curation &amp; Publishing Pipeline</span></span>
+              <span class="project__tag">Scrapes, clips, and publishes League of Legends esports match VODs, fully hands-off</span>
+            </span>
+            <span class="project__plus" aria-hidden="true"></span>
+          </button>
+          <div class="project__detail" id="proj-5-detail" role="region" aria-label="Automated Video Curation and Publishing Pipeline">
+            <div class="project__grid">
+              <div class="project__prose">
+                <h4>Problem</h4>
+                <p>Curating League of Legends match footage by hand meant scraping sources, watching VODs, and cutting clips before anything could be published. I wanted the whole path from raw match data to publish-ready video to run without me in the loop.</p>
+                <h4>Approach</h4>
+                <p>Built a Python pipeline that scrapes match VODs, filters and curates them against selection rules, then cuts and processes the clips with ffmpeg. API integration ties the scraping and publishing stages together, and a repeatable publishing workflow deploys the finished video.</p>
+                <h4>Results</h4>
+                <ul>
+                  <li>Fully hands-off: raw match data in, publish-ready video out, with no manual editing between stages.</li>
+                  <li>Repeatable publishing workflow makes every run reproducible.</li>
+                  <li>ffmpeg-based clip processing standardizes output for direct publishing.</li>
+                </ul>
+              </div>
+              <div class="project__aside">
+                <div class="ph" role="img" aria-label="Placeholder: scrape curate clip publish"><span>Placeholder — Scrape → curate → clip → publish</span></div>
+                <p class="project__stack">Python · ffmpeg · Web scraping · Automation · API integration</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="pgroup">
+      <p class="pgroup__label">Digital marketing &amp; web</p>
+      <ul class="projects">
+
+        <!-- 06 -->
+        <li class="project" id="proj-6" data-project="6">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-6-detail">
+            <span class="project__no">06</span>
+            <span class="project__titles">
+              <span class="project__titlerow"><span class="project__title">RADCO Construction — Website Refactor</span></span>
+              <span class="project__tag">Commercial site rebuilt for local search — radco.construction</span>
+            </span>
+            <span class="project__plus" aria-hidden="true"></span>
+          </button>
+          <div class="project__detail" id="proj-6-detail" role="region" aria-label="RADCO Construction Website Refactor">
+            <div class="project__grid">
+              <div class="project__prose">
+                <h4>Problem</h4>
+                <p>RADCO Construction needed a commercial site that surfaced in local search instead of sitting invisible. I wanted the rebuild to earn organic traffic on its own rather than lean on paid placement.</p>
+                <h4>Approach</h4>
+                <p>Designed and deployed the site on WordPress with hand-tuned HTML/CSS, then reworked the site architecture and metadata around current SEO best practices. Wired in analytics to see what search actually rewarded.</p>
+                <h4>Results</h4>
+                <ul>
+                  <li>Improved local search visibility through a cleaner site architecture and complete metadata.</li>
+                  <li>Structured the site to drive organic traffic rather than paid placement.</li>
+                  <li>Analytics in place to track search performance over time.</li>
+                </ul>
+              </div>
+              <div class="project__aside">
+                <div class="ph" role="img" aria-label="Placeholder: local search and site architecture"><span>Placeholder — Local search + site architecture</span></div>
+                <p class="project__stack">WordPress · HTML/CSS · SEO · Site architecture · Analytics</p>
+                <p class="project__urls"><a href="https://radco.construction" target="_blank" rel="noopener">radco.construction ↗</a></p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 07 -->
+        <li class="project" id="proj-7" data-project="7">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-7-detail">
+            <span class="project__no">07</span>
+            <span class="project__titles">
+              <span class="project__titlerow"><span class="project__title">Imperial Family Law — CMS</span></span>
+              <span class="project__tag">Legal-services platform, live at imperialfamilylaw.com</span>
+            </span>
+            <span class="project__plus" aria-hidden="true"></span>
+          </button>
+          <div class="project__detail" id="proj-7-detail" role="region" aria-label="Imperial Family Law CMS">
+            <div class="project__grid">
+              <div class="project__prose">
+                <h4>Problem</h4>
+                <p>A family law practice needs its site to turn search traffic into consultations. I wanted pages that loaded fast, guided prospective clients to the right place, and captured inquiries without friction.</p>
+                <h4>Approach</h4>
+                <p>Developed and maintained the practice's platform on WordPress at imperialfamilylaw.com, structuring navigation around the services prospective clients look for and tuning page performance and SEO. Wired secure lead-capture forms into the contact flow so inquiries reached the practice cleanly.</p>
+                <h4>Results</h4>
+                <ul>
+                  <li>Live WordPress platform serving the practice at imperialfamilylaw.com.</li>
+                  <li>Secure lead-capture forms routing prospective-client inquiries to the firm.</li>
+                  <li>Navigation and page performance tuned for search visibility.</li>
+                </ul>
+              </div>
+              <div class="project__aside">
+                <div class="ph" role="img" aria-label="Placeholder: WordPress site to lead-capture funnel"><span>Placeholder — WordPress site → lead-capture funnel</span></div>
+                <p class="project__stack">WordPress · HTML/CSS · SEO · Lead-capture forms</p>
+                <p class="project__urls"><a href="https://imperialfamilylaw.com" target="_blank" rel="noopener">imperialfamilylaw.com ↗</a></p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 08 -->
+        <li class="project" id="proj-8" data-project="8">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-8-detail">
+            <span class="project__no">08</span>
+            <span class="project__titles">
+              <span class="project__titlerow"><span class="project__title">UI/UX Prototypes</span></span>
+              <span class="project__tag">High-fidelity, interactive Figma prototypes for modern web applications</span>
+            </span>
+            <span class="project__plus" aria-hidden="true"></span>
+          </button>
+          <div class="project__detail" id="proj-8-detail" role="region" aria-label="UI/UX Prototypes">
+            <div class="project__grid">
+              <div class="project__prose">
+                <h4>Problem</h4>
+                <p>Design ideas stay cheap and ambiguous until someone can click through them. I wanted high-fidelity, interactive prototypes that showed exactly how a web app would look and behave before any code got written.</p>
+                <h4>Approach</h4>
+                <p>Built interactive UI/UX prototypes in Figma across two efforts. Inter-Amity was a comprehensive design system and layout — shared components and page structure meant to be reused rather than redrawn. Crane HIFI Bar was a set of responsive web layouts built around brand identity and the end-user experience.</p>
+                <h4>Results</h4>
+                <ul>
+                  <li>Inter-Amity: a comprehensive design system and layout defining shared components and page structure.</li>
+                  <li>Crane HIFI Bar: responsive web layouts focused on brand identity and user experience.</li>
+                  <li>Both delivered as high-fidelity, clickable Figma prototypes.</li>
+                </ul>
+              </div>
+              <div class="project__aside">
+                <div class="ph" role="img" aria-label="Placeholder: Figma prototype flow"><span>Placeholder — Figma prototype flow</span></div>
+                <p class="project__stack">Figma · UI/UX design · Design systems · Prototyping</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ ABOUT / SKILLS ============================ -->
+  <section class="section shell" id="about" data-reveal>
+    <div class="section__head">
+      <p class="section__kick"><b>03</b> / STACK</p>
+      <h2 class="section__title">The tools I reach for.</h2>
+      <p class="section__note">Hover a skill to see which projects it shows up in.</p>
+    </div>
+
+    <div class="about">
+      <div class="about__skills">
+        <div class="sgroup">
+          <h3 class="sgroup__label">Languages</h3>
+          <p class="sgroup__tags">
+            <button class="skill" data-projects="1 3 4 5">Python</button>
+            <button class="skill" data-projects="3 4">JavaScript</button>
+            <button class="skill" data-projects="">C</button>
+            <button class="skill" data-projects="">Verilog</button>
+            <button class="skill" data-projects="1">MATLAB</button>
+          </p>
+        </div>
+        <div class="sgroup">
+          <h3 class="sgroup__label">Systems &amp; infrastructure</h3>
+          <p class="sgroup__tags">
+            <button class="skill" data-projects="2">Linux / Unix</button>
+            <button class="skill" data-projects="2">System administration</button>
+            <button class="skill" data-projects="3 4">FastAPI</button>
+            <button class="skill" data-projects="1 2 3 4 5">Git &amp; GitHub</button>
+            <button class="skill" data-projects="2">Raspberry Pi</button>
+            <button class="skill" data-projects="2">Homelab</button>
+            <button class="skill" data-projects="2">Networking</button>
+          </p>
+        </div>
+        <div class="sgroup">
+          <h3 class="sgroup__label">Integration &amp; automation</h3>
+          <p class="sgroup__tags">
+            <button class="skill" data-projects="1 3 5">API integration</button>
+            <button class="skill" data-projects="1">Webull OpenAPI</button>
+            <button class="skill" data-projects="3 5">Web scraping</button>
+            <button class="skill" data-projects="3">LLM automation</button>
+            <button class="skill" data-projects="1">Statistical methods</button>
+          </p>
+        </div>
+        <div class="sgroup">
+          <h3 class="sgroup__label">Digital marketing &amp; web</h3>
+          <p class="sgroup__tags">
+            <button class="skill" data-projects="6">SEO optimization</button>
+            <button class="skill" data-projects="3 7">Lead generation</button>
+            <button class="skill" data-projects="3">Market research</button>
+            <button class="skill" data-projects="3 6">Analytics</button>
+            <button class="skill" data-projects="6 7">WordPress</button>
+            <button class="skill" data-projects="6 7">HTML / CSS</button>
+            <button class="skill" data-projects="8">Figma / UI-UX</button>
+            <button class="skill" data-projects="8">Design systems</button>
+          </p>
+        </div>
+        <div class="sgroup">
+          <h3 class="sgroup__label">Hardware &amp; EDA</h3>
+          <p class="sgroup__tags">
+            <button class="skill" data-projects="">KiCad</button>
+            <button class="skill" data-projects="">Vivado</button>
+            <button class="skill" data-projects="">Arduino</button>
+            <button class="skill" data-projects="">SOLIDWORKS</button>
+            <button class="skill" data-projects="">Prototyping &amp; testing</button>
+          </p>
+        </div>
+      </div>
+
+      <aside class="about__side">
+        <p class="about__lede">
+          Computer-systems&#8211;focused, with hands-on time in Linux administration, API
+          integration, and shipping client websites. I build automated, well-documented
+          systems &#8212; and validate them before I trust them.
+        </p>
+        <ul class="about__langs">
+          <li><span>English</span> <em>Native / Bilingual</em></li>
+          <li><span>Spanish</span> <em>Native / Bilingual</em></li>
+        </ul>
+        <div class="about__chips" aria-hidden="false">
+          <a class="pchip" data-project="1" href="#proj-1">01 Trading bots</a>
+          <a class="pchip" data-project="2" href="#proj-2">02 Infrastructure</a>
+          <a class="pchip" data-project="3" href="#proj-3">03 Leadscout</a>
+          <a class="pchip" data-project="4" href="#proj-4">04 CRM</a>
+          <a class="pchip" data-project="5" href="#proj-5">05 Video pipeline</a>
+          <a class="pchip" data-project="6" href="#proj-6">06 RADCO</a>
+          <a class="pchip" data-project="7" href="#proj-7">07 Imperial Law</a>
+          <a class="pchip" data-project="8" href="#proj-8">08 UI/UX</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACT ============================ -->
+  <section class="contact shell" id="contact" data-reveal>
+    <p class="section__kick"><b>04</b> / CONTACT</p>
+    <h2 class="contact__title">Work with me.</h2>
+    <p class="contact__body">
+      I&#8217;m open to roles and collaborations in computer systems, cloud infrastructure, and
+      web &amp; digital work. If you&#8217;ve got a system that needs building &#8212; or one
+      that keeps falling over &#8212; I&#8217;d love to hear about it.
+    </p>
+    <div class="contact__links">
+      <a href="mailto:ocanizales@ucsd.edu"><span>Email</span>ocanizales@ucsd.edu</a>
+      <a href="tel:+17606041226"><span>Phone</span>760-604-1226</a>
+      <a href="https://www.linkedin.com/in/oscar-canizales" target="_blank" rel="noopener"><span>LinkedIn</span>Oscar Canizales &#8599;</a>
+    </div>
+  </section>
+
+  <footer class="foot shell">
+    <span>&#169; <span id="year"></span> Oscar Canizales</span>
+    <span>San Diego, CA &#183; hand-built, no templates</span>
+  </footer>
+
+</main>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
