@@ -1,0 +1,19 @@
+# systemd unit template for the engineering-portfolio static site.
+# __USER__ / __WORKDIR__ are substituted at install time by vps-setup/bootstrap.sh,
+# or by hand:  sed -e "s|__USER__|$USER|g" -e "s|__WORKDIR__|$PWD|g" deploy/portfolio.service \
+#              | sudo tee /etc/systemd/system/portfolio.service
+[Unit]
+Description=engineering-portfolio static preview — 127.0.0.1:8901
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__WORKDIR__
+ExecStart=/usr/bin/python3 -m http.server 8901 --bind 127.0.0.1
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
