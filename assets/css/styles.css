@@ -206,13 +206,9 @@ b, strong { font-weight: 600; color: var(--ink); }
 .project__prose li::before { content: "→"; font-family: var(--mono); position: absolute; left: 0; color: var(--faint); }
 .project__prose b { color: var(--ink); font-family: var(--mono); font-size: .9em; }
 
-.ph {
-  border: 1px dashed var(--line-2); border-radius: var(--radius); min-height: 150px;
-  display: grid; place-items: center; text-align: center; padding: 1.2rem;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1.3px);
-  background-size: 16px 16px;
-}
-.ph span { font-family: var(--mono); font-size: .76rem; letter-spacing: .02em; color: var(--faint); }
+.shot { display: block; border: 1px solid var(--line-2); border-radius: var(--radius); overflow: hidden; background: var(--bg-2); transition: border-color .25s var(--ease); }
+.shot:hover { border-color: var(--ink-2); }
+.shot img { display: block; width: 100%; height: auto; }
 .project__stack { font-family: var(--mono); margin-top: 1rem; font-size: .8rem; letter-spacing: .01em; color: var(--ink-2); }
 .project__stack::before { content: "stack: "; color: var(--faint); }
 .project__urls { font-family: var(--mono); margin-top: .5rem; font-size: .8rem; }
@@ -262,6 +258,8 @@ b, strong { font-weight: 600; color: var(--ink); }
 .contact__links a:hover { color: var(--ink); }
 
 .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem; padding: 2rem 0 3rem; font-family: var(--mono); font-size: .76rem; letter-spacing: .02em; color: var(--faint); border-top: 1px solid var(--line); }
+.foot a { color: var(--ink-2); transition: color .25s var(--ease); }
+.foot a:hover { color: var(--ink); }
 
 /* =================================================================
    RESPONSIVE
