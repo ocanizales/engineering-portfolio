@@ -7,12 +7,14 @@ engineering-portfolio/
 ├── index.html                 # Full HTML doc. <head> loads Google Fonts.
 │                              # Sections in order:
 │                              #   topbar → .intro → #experience (2 tracks)
-│                              #   → #projects → #about → #contact → footer
+│                              #   → #projects → #demos → #about → #contact
 ├── assets/
 │   ├── css/styles.css         # Tokens (:root) + editorial gray theme.
 │   │                          #   Blocks: TOPBAR, INTRO, SECTION/reveal,
 │   │                          #   EXPERIENCE(year lists), PROJECTS(rows),
-│   │                          #   ABOUT/SKILLS, CONTACT, RESPONSIVE, RM.
+│   │                          #   DEMOS(gallery), ABOUT/SKILLS, CONTACT,
+│   │                          #   RESPONSIVE, RM.
+│   ├── img/demos/*.webp       # Gallery thumbnails (1200×750, one per demo)
 │   └── js/main.js             # One IIFE:
 │                              #   1 topbar scroll-state / burger / scroll-spy
 │                              #   2 [data-reveal] IntersectionObserver
@@ -20,6 +22,11 @@ engineering-portfolio/
 │                              #     rows AND project rows
 │                              #   4 skill<->project cross-highlight
 │                              #   5 footer year
+├── demos/<slug>/              # 8 PRE-BUILT static bundles (React+Vite dist
+│                              # output, built with --base=./ in the
+│                              # ocanizales/demo-sites repo — NOT built here;
+│                              # this repo stays no-build. Rebuild there,
+│                              # re-copy dist/ to update.)
 ├── README.md · CLAUDE.md · HANDOFF.md · PROJECT_MAP.md
 ```
 

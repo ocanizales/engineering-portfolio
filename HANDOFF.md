@@ -1,9 +1,36 @@
 # HANDOFF.md — engineering-portfolio
 
-_Last updated: 2026-07-09_
+_Last updated: 2026-07-16_
 
 ## Status
-**v4 — "more tech oriented" reskin. DOM-verified.** No console errors.
+**v4 + client demo gallery. Screenshot-verified.**
+
+## Demo gallery (2026-07-16)
+New `03 / DEMOS` section between PROJECTS and STACK (STACK→04, CONTACT→05);
+"Demos" nav link + scroll-spy id added. 9 live demo builds from the private
+`ocanizales/demo-sites` repo now ship under `demos/<slug>/` as pre-built Vite
+static bundles (`--base=./`), thumbnails in `assets/img/demos/*.webp`
+(1200×750, headless-chromium captures). The portfolio itself remains
+no-build; to update a demo, rebuild in demo-sites and re-copy its `dist/`.
+
+Gallery facts worth knowing:
+- Card [01] **Crane HIFI Bar** is a full-width feature (`.demo--wide`,
+  2:1 thumb) — the coded build of the Figma prototype linked in project
+  card 08. In demo-sites it's a component *kit* (lib-mode vite config);
+  the servable demo builds with its separate `vite.config.demo.ts`.
+- The other 8 folders are **6 brands** — two briefs have A/B concept pairs,
+  shown side-by-side: Sun Dental (sun-dental-office = A,
+  local-dentist-business = B) and Colchones Segunda Itzel
+  (colchones-segunda-itzel = A, bilingual-landing-page = B). Card copy says
+  "second concept" honestly.
+- `fitness-page` is **Boulevard Fitness**; `purple-fitness-page` is **Prime
+  Fitness** (different gyms, different designs).
+- Demo SPAs use react-router **memory routers** (fitness-page was converted
+  from browser router — it 404'd under a subpath), so they work at any path.
+- CSS gotcha hit + fixed: `.demo__shot` needed `height: auto` — the img
+  `height` attribute otherwise defeats `aspect-ratio: 16/10`.
+
+## (v4 changes retained)
 
 ## v4 changes (latest)
 User: "make the design more tech oriented" (+ ran `/web-stack`, which confirmed:

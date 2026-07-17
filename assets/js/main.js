@@ -41,7 +41,7 @@
     },
     { rootMargin: '-45% 0px -50% 0px' }
   );
-  ['experience', 'about', 'contact'].forEach((id) => {
+  ['experience', 'demos', 'about', 'contact'].forEach((id) => {
     const el = document.getElementById(id);
     if (el) spy.observe(el);
   });
