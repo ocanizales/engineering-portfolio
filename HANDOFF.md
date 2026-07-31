@@ -148,6 +148,7 @@ skills group + design spec — the "use subagents" ask).
 
 ## Next / possible follow-ups (not started)
 - Real diagrams for the 8 `.ph` placeholders.
-- Confirm real LinkedIn URL (currently `/in/oscar-canizales`, a guess).
+- ~~Confirm real LinkedIn URL~~ — confirmed by the user 2026-07-31:
+  `https://www.linkedin.com/in/oscarcanizales/` (no hyphen). Was a guess until then.
 - When the CRM is actually built, flip 04 from "In progress"/Goals to Results.
 - Deploy (static). Not yet a git repo / not pushed to `ocanizales/engineering-portfolio`.
