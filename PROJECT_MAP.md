@@ -49,13 +49,13 @@ Technical spec-sheet look: dark slate #232528, dot grid, numeric indices,
 monochrome (`--accent` = `--ink`).
 
 ## Projects
-13 cards in 3 `.pgroup` blocks: Autonomous systems & AI (01–05), Infrastructure
-& automation (06–09), Digital marketing & web (10–13). `data-project` ids 1–13
+10 cards in 3 `.pgroup` blocks: Autonomous systems & AI (01–03), Infrastructure
+& automation (04–07), Digital marketing & web (08–10). `data-project` ids 1–10
 match `#proj-N`. Card 01 is the flagship (`.project--flag`, left hairline).
 Shipping projects carry a `.status--live` pill (pulse dot).
 
-`data-cat` drives the filter bar — web 7 · ai 6 · automation 6 · infra 4 ·
-trading 2. **The counts printed in `.filter__n` are hand-written: recount when
+`data-cat` drives the filter bar — web 6 · ai 4 · automation 6 · infra 3 ·
+trading 1. **The counts printed in `.filter__n` are hand-written: recount when
 you retag anything.**
 
 ## Key selectors (JS ↔ CSS ↔ HTML contract)

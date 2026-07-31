@@ -35,9 +35,9 @@ EXPERIENCE`), `[NN]` project numbers, `stack:` / `~/` mono affordances, sharp
 
 ## Architecture (see PROJECT_MAP.md)
 - `index.html` — intro (+ metrics band) → 01 experience (2 year-list tracks)
-  → 02 projects (filter bar + 3 groups: "Autonomous systems & AI" 01–05,
-  "Infrastructure & automation" 06–09, "Digital marketing & web" 10–12;
-  12 expandable cards) → 03 systems (SVG fleet map) → 04 demos → 05 stack
+  → 02 projects (filter bar + 3 groups: "Autonomous systems & AI" 01–03,
+  "Infrastructure & automation" 04–07, "Digital marketing & web" 08–10;
+  10 expandable cards) → 03 systems (SVG fleet map) → 04 demos → 05 stack
   (6 skill groups) → 06 contact. Certs stay in the experience "Learning" track.
   Palette, shortcut overlay, and toast live at the end of `<body>`.
 - `assets/css/styles.css` — token-driven; dark neutral-gray monochrome theme.
@@ -46,8 +46,10 @@ EXPERIENCE`), `[NN]` project numbers, `stack:` / `~/` mono affordances, sharp
 ## The interactive layer (added 2026-07-31)
 Everything here is **progressive** — with JS off the page is still a complete,
 readable document. Do not add interactivity that gates content.
-- **Command palette** — `⌘K` / `Ctrl K` / `/`. The index is read out of the DOM
-  in `buildIndex()`, so it can never drift from the page. Ranking: subsequence
+- **Command palette** — `Ctrl K` / `/`. The keycaps on the page say **Ctrl K**
+  (the user's call, 2026-07-31); the handler still accepts `⌘K` so Mac visitors
+  aren't stranded — keep the binding, don't advertise it. The index is read out
+  of the DOM in `buildIndex()`, so it can never drift from the page. Ranking: subsequence
   match on the **label only**, substring on the body, plus a per-kind boost.
   Subsequence over long body text matches nearly everything — don't reintroduce it.
 - **Keyboard map** — `?`. `j`/`k` cursor, `e` expand-all, `f` cycle filter,
@@ -67,17 +69,23 @@ readable document. Do not add interactivity that gates content.
 - IEEE role = **Project Space Officer** (never "Super Computing Chair").
 - The metrics band is **counted, not estimated** — 16 repos / 303 commits /
   662 test functions across `~/apps`, 4 gate-passed autonomous changes, Lighthouse
-  SEO 100. If you restate them, recount first; a stale number here is a lie on a
-  résumé.
+  SEO 100, and 9 demo builds (that last one must equal the number of cards in the
+  04 DEMOS section). If you restate them, recount first; a stale number here is a
+  lie on a résumé.
 - **seo-ops (project 01) genuinely ships to a live client site.** Four changes,
   4/4 gate-passed. Don't inflate that number and don't soften it either.
-- The old "Client CRM — In progress" card is now **09 Client Intake & Proposal
+- The old "Client CRM — In progress" card is now **07 Client Intake & Proposal
   Pipeline**, and it *does* ship: `engine.intake` + `engine.quote` + the
   dashboard `/intake` page. Deal-stage tracking still isn't built — don't claim it.
 - apex-trader and polymarket-bot are **paper only**. Never imply live capital.
 - Live client sites: segundaitzel.mx, radco.construction.
 - **Imperial Family Law was removed at the user's request (2026-07-31).** Do not
   reintroduce it, and do not cite imperialfamilylaw.com anywhere.
+- **graphify and the 3B-model project were removed at the user's request
+  (2026-07-31).** Don't reintroduce either card, the `knowledge graph` fleet
+  node, the `3.8× less context` metric, the "Knowledge graphs" / "Constrained
+  decoding" skill chips, or the `llama3.2:3b` model name — even though all of it
+  is real and still runs on the box. Ollama stays as generic local inference.
 
 ## Source of truth for content
 Two resumes: `..job_docs/oscar_canizales_engineering_resume.pdf` (primary) and

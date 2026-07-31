@@ -173,3 +173,36 @@ skills group + design spec — the "use subagents" ask).
   `https://www.linkedin.com/in/oscarcanizales/` (no hyphen). Was a guess until then.
 - When the CRM is actually built, flip 04 from "In progress"/Goals to Results.
 - Deploy (static). Not yet a git repo / not pushed to `ocanizales/engineering-portfolio`.
+
+---
+
+## Change: graphify + the 3B-model card removed (2026-07-31, later session)
+User: *"change the search to ctrl+k, and do not include: graphify and the 3b model."*
+
+- **Cards 03 (Constrained Decoding on a 3B Model) and 04 (graphify) deleted.**
+  05–12 renumbered down to **03–10**; ids, `data-project`, `aria-controls`,
+  `#proj-N` anchors, `.project__no`, contact chips, and the two `(project [NN])`
+  cross-refs in the demos section all moved with them.
+- Filter counts recut from `data-cat`: all 10 · web 6 · ai 4 · automation 6 ·
+  infra 3 · trading 1.
+- Skill chips remapped; **"Constrained decoding"** and **"Knowledge graphs"**
+  dropped (both pointed only at removed cards).
+- Fleet map: `graph` node and its 3 soft edges removed from `FLEET` in
+  `main.js`; the `ollama` node's sub is now `Ollama · CPU-only` (was
+  `llama3.2:3b`). Fallback list lost its `· graphify`.
+- Metrics band tile 6 was graphify's `3.8× less context` → now **9 demo sites
+  built end to end** (keeps the 6-column grid, which the 3/2-col breakpoints
+  divide evenly).
+- Intro sentence lost its "knowledge graph over my own codebases" clause →
+  now links Leadscout. VPS-fleet card no longer lists "graph rebuilds".
+- **Search keycaps now read `Ctrl K`** in the topbar, the metrics note, and the
+  `?` overlay (the overlay row collapsed from `⌘K / Ctrl K / /` to `Ctrl K / /`).
+  `main.js` still fires on `metaKey || ctrlKey`, so ⌘K keeps working on macOS —
+  it just isn't advertised.
+
+**Verified in headless Chromium** against the live :8901 server: zero page
+errors, 17 fleet nodes render, Ctrl+K opens the palette, searching *graphify*
+and *3B* both return "Nothing matches that.", 10 project rows, AI filter shows
+4. Static checks: no dangling `href="#…"` / `aria-controls`, no duplicate ids,
+every `.filter__n` matches its `data-cat` tally, every skill chip points at a
+live project.

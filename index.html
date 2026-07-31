@@ -23,7 +23,7 @@
   Geist (headings + prose) + Geist Mono (all metadata). Graph-paper
   dot grid, numeric indices. Hand-written HTML / CSS / vanilla JS.
 
-  Interactive layer: command palette (Cmd/Ctrl-K or /), keyboard
+  Interactive layer: command palette (Ctrl-K or /), keyboard
   navigation (? for the map), project filters, an SVG fleet diagram
   rendered from a data structure in main.js, count-up metrics, and a
   pointer-tracked grid light. All of it degrades to a readable static
@@ -46,7 +46,7 @@
     </nav>
     <button class="topbar__search" id="palette-open" aria-label="Search this site" title="Search (Ctrl K)">
       <span class="topbar__searchlabel">Search</span>
-      <kbd>&#8984;K</kbd>
+      <kbd>Ctrl K</kbd>
     </button>
     <button class="topbar__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   </div>
@@ -68,7 +68,7 @@
       itself, and refuses to ship it unless five independent checks pass. I also run
       <a href="#proj-2" class="ln">quant research platforms</a>, a
       <a href="#systems" class="ln">self&#8209;hosted VPS fleet</a>, and a
-      <a href="#proj-4" class="ln">knowledge graph over my own codebases</a>.
+      <a href="#proj-3" class="ln">lead&#8209;generation service that finds businesses with no website</a>.
       By day I teach kids robotics at <a href="#work" class="ln">Brains&nbsp;and&nbsp;Motion</a>
       and keep the schematics honest as a <a href="#work" class="ln">project&#8209;space officer</a>
       with IEEE at UC&nbsp;San&nbsp;Diego.
@@ -103,11 +103,11 @@
         <span class="metric__label">Lighthouse SEO,<br>mobile &amp; desktop</span>
       </div>
       <div class="metric">
-        <span class="metric__num" data-count="3.8" data-suffix="&#215;">3.8&#215;</span>
-        <span class="metric__label">less context per<br>codebase question</span>
+        <span class="metric__num" data-count="9">9</span>
+        <span class="metric__label">demo sites built<br>end to end</span>
       </div>
     </div>
-    <p class="metrics__note" data-reveal><span class="mono">note:</span> counted from the repositories themselves, not estimated. Press <kbd>&#8984;K</kbd> to search this site, <kbd>?</kbd> for the keyboard map.</p>
+    <p class="metrics__note" data-reveal><span class="mono">note:</span> counted from the repositories themselves, not estimated. Press <kbd>Ctrl K</kbd> to search this site, <kbd>?</kbd> for the keyboard map.</p>
   </section>
 
   <!-- ============================ EXPERIENCE ============================ -->
@@ -230,12 +230,12 @@
 
     <!-- ---------- filter bar ---------- -->
     <div class="filters" role="group" aria-label="Filter projects by category">
-      <button class="filter is-on" data-filter="all">All <span class="filter__n">12</span></button>
+      <button class="filter is-on" data-filter="all">All <span class="filter__n">10</span></button>
       <button class="filter" data-filter="web">Web &amp; SEO <span class="filter__n">6</span></button>
-      <button class="filter" data-filter="ai">AI &amp; LLM <span class="filter__n">6</span></button>
+      <button class="filter" data-filter="ai">AI &amp; LLM <span class="filter__n">4</span></button>
       <button class="filter" data-filter="automation">Automation <span class="filter__n">6</span></button>
-      <button class="filter" data-filter="infra">Infrastructure <span class="filter__n">4</span></button>
-      <button class="filter" data-filter="trading">Trading <span class="filter__n">2</span></button>
+      <button class="filter" data-filter="infra">Infrastructure <span class="filter__n">3</span></button>
+      <button class="filter" data-filter="trading">Trading <span class="filter__n">1</span></button>
     </div>
     <p class="filters__empty" id="filters-empty" hidden>No projects in that category.</p>
 
@@ -318,79 +318,16 @@
         </li>
 
         <!-- 03 -->
-        <li class="project" id="proj-3" data-project="3" data-cat="ai trading">
+        <li class="project" id="proj-3" data-project="3" data-cat="ai web">
           <button class="project__head" aria-expanded="false" aria-controls="proj-3-detail">
             <span class="project__no">03</span>
-            <span class="project__titles">
-              <span class="project__titlerow"><span class="project__title">Constrained Decoding on a 3B Model</span><span class="status status--note">Research</span></span>
-              <span class="project__tag">A schema beat a bigger model: 0/4 &#8594; 4/4 valid verdicts on CPU-only hardware</span>
-            </span>
-            <span class="project__plus" aria-hidden="true"></span>
-          </button>
-          <div class="project__detail" id="proj-3-detail" role="region" aria-label="Constrained Decoding on a 3B Model">
-            <div class="project__grid">
-              <div class="project__prose">
-                <h4>Problem</h4>
-                <p>The trading committee needed structured verdicts from a language model running locally on a CPU-only VPS &#8212; no GPU, no API budget. A 3-billion-parameter model asked politely for JSON returned prose, fences, and half-objects. Every one of those parsed to nothing, and the committee silently degraded to a dry run without saying so.</p>
-                <h4>Approach</h4>
-                <p>Rather than reaching for a larger model, I moved the constraint from the prompt into the decoder: a JSON schema enforced at generation time, so invalid tokens are never sampled in the first place. I also fixed the quieter bug behind it &#8212; the backend was requesting a model name that wasn&#8217;t served, 404ing, and falling back to dry-run without surfacing an error.</p>
-                <h4>Results</h4>
-                <ul>
-                  <li>Verdict parse rate went from <b>0/4</b> to <b>4/4</b> on the same 3B model &#8212; a schema outperformed a parameter-count upgrade.</li>
-                  <li>The backend now auto-selects an installed model instead of failing invisibly.</li>
-                  <li>Standing rule that came out of it: <b>never fake a verdict on a parse failure</b>. A pipeline that reports success on no data is worse than one that stops.</li>
-                  <li>Runs at zero marginal cost on hardware I already pay for.</li>
-                </ul>
-              </div>
-              <div class="project__aside">
-                <p class="project__stack">Ollama · llama3.2:3b · JSON-schema constrained decoding · Python</p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- 04 -->
-        <li class="project" id="proj-4" data-project="4" data-cat="ai infra">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-4-detail">
-            <span class="project__no">04</span>
-            <span class="project__titles">
-              <span class="project__titlerow"><span class="project__title">graphify &#8212; Codebase Knowledge Graphs</span></span>
-              <span class="project__tag">Turns repositories into a queryable graph so a question costs a fraction of the context</span>
-            </span>
-            <span class="project__plus" aria-hidden="true"></span>
-          </button>
-          <div class="project__detail" id="proj-4-detail" role="region" aria-label="graphify Codebase Knowledge Graphs">
-            <div class="project__grid">
-              <div class="project__prose">
-                <h4>Problem</h4>
-                <p>Answering &#8220;what breaks if I change this function&#8221; across a dozen repositories meant grepping and reading files until the answer appeared, which is slow for a person and expensive for a model. The information is a graph; searching it as flat text throws that structure away.</p>
-                <h4>Approach</h4>
-                <p>Built a pipeline that ingests code <em>and</em> documentation into a persistent graph &#8212; identifying god nodes, running community detection, and exposing query, path, and blast-radius operations. Rolled it out across the whole fleet and wired the refresh into a scheduled job so the graphs never go stale.</p>
-                <h4>Results</h4>
-                <ul>
-                  <li><b>8</b> repositories onboarded and kept current by a scheduled rebuild, at <b>zero</b> token cost.</li>
-                  <li><b>3.8&#215;</b> less context per codebase question overall, and <b>7.2&#215;</b> on targeted queries.</li>
-                  <li>Blast-radius queries return the affected set directly &#8212; a 14-node impact analysis where the alternative was reading the repository.</li>
-                </ul>
-              </div>
-              <div class="project__aside">
-                <p class="project__stack">Python · graph construction · community detection · scheduled indexing</p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- 05 -->
-        <li class="project" id="proj-5" data-project="5" data-cat="ai web">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-5-detail">
-            <span class="project__no">05</span>
             <span class="project__titles">
               <span class="project__titlerow"><span class="project__title">Leadscout</span></span>
               <span class="project__tag">AI lead generation &#8212; finds businesses with no website and qualifies them before I call</span>
             </span>
             <span class="project__plus" aria-hidden="true"></span>
           </button>
-          <div class="project__detail" id="proj-5-detail" role="region" aria-label="Leadscout">
+          <div class="project__detail" id="proj-3-detail" role="region" aria-label="Leadscout">
             <div class="project__grid">
               <div class="project__prose">
                 <h4>Problem</h4>
@@ -418,17 +355,17 @@
       <p class="pgroup__label">Infrastructure &amp; automation</p>
       <ul class="projects">
 
-        <!-- 06 -->
-        <li class="project" id="proj-6" data-project="6" data-cat="infra">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-6-detail">
-            <span class="project__no">06</span>
+        <!-- 04 -->
+        <li class="project" id="proj-4" data-project="4" data-cat="infra">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-4-detail">
+            <span class="project__no">04</span>
             <span class="project__titles">
               <span class="project__titlerow"><span class="project__title">Self-Hosted VPS Fleet</span><span class="status status--live">Live</span></span>
               <span class="project__tag">Sixteen repositories, a dozen services, one authenticated gateway &#8212; built stdlib-only</span>
             </span>
             <span class="project__plus" aria-hidden="true"></span>
           </button>
-          <div class="project__detail" id="proj-6-detail" role="region" aria-label="Self-Hosted VPS Fleet">
+          <div class="project__detail" id="proj-4-detail" role="region" aria-label="Self-Hosted VPS Fleet">
             <div class="project__grid">
               <div class="project__prose">
                 <h4>Problem</h4>
@@ -439,7 +376,7 @@
                 <ul>
                   <li>Passwords stored as <b>PBKDF2-SHA256</b> at 200k iterations with a per-user salt; sessions are HMAC-signed, <span class="mono">HttpOnly</span>, <span class="mono">SameSite=Lax</span> cookies. No plaintext secret is stored or committed.</li>
                   <li>The proxy is <b>allow-listed</b> to known ports, so it cannot be turned into an arbitrary SSRF pivot &#8212; a deliberate constraint, not an oversight.</li>
-                  <li>Scheduled jobs handle backups, graph rebuilds, and the nightly SEO run; secrets are guarded by a pre-push hook.</li>
+                  <li>Scheduled jobs handle backups and the nightly SEO run; secrets are guarded by a pre-push hook.</li>
                   <li>During a security pass I found and redacted a hardcoded Google API key in a test fixture, then swept the rest of the repositories to confirm it was the only one.</li>
                 </ul>
               </div>
@@ -450,17 +387,17 @@
           </div>
         </li>
 
-        <!-- 07 -->
-        <li class="project" id="proj-7" data-project="7" data-cat="infra automation">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-7-detail">
-            <span class="project__no">07</span>
+        <!-- 05 -->
+        <li class="project" id="proj-5" data-project="5" data-cat="infra automation">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-5-detail">
+            <span class="project__no">05</span>
             <span class="project__titles">
               <span class="project__titlerow"><span class="project__title">Self-Hosted Music Pipeline</span><span class="status status--live">Live</span></span>
               <span class="project__tag">A closed loop: what I listen to becomes recommendations, downloads, tags, and playlists</span>
             </span>
             <span class="project__plus" aria-hidden="true"></span>
           </button>
-          <div class="project__detail" id="proj-7-detail" role="region" aria-label="Self-Hosted Music Pipeline">
+          <div class="project__detail" id="proj-5-detail" role="region" aria-label="Self-Hosted Music Pipeline">
             <div class="project__grid">
               <div class="project__prose">
                 <h4>Problem</h4>
@@ -482,17 +419,17 @@
           </div>
         </li>
 
-        <!-- 08 -->
-        <li class="project" id="proj-8" data-project="8" data-cat="automation ai">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-8-detail">
-            <span class="project__no">08</span>
+        <!-- 06 -->
+        <li class="project" id="proj-6" data-project="6" data-cat="automation ai">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-6-detail">
+            <span class="project__no">06</span>
             <span class="project__titles">
               <span class="project__titlerow"><span class="project__title">Automated Video Curation &amp; Publishing</span></span>
               <span class="project__tag">Download, detect the highlight, reframe to 9:16, caption, and stage for publish &#8212; no editor</span>
             </span>
             <span class="project__plus" aria-hidden="true"></span>
           </button>
-          <div class="project__detail" id="proj-8-detail" role="region" aria-label="Automated Video Curation and Publishing">
+          <div class="project__detail" id="proj-6-detail" role="region" aria-label="Automated Video Curation and Publishing">
             <div class="project__grid">
               <div class="project__prose">
                 <h4>Problem</h4>
@@ -514,17 +451,17 @@
           </div>
         </li>
 
-        <!-- 09 -->
-        <li class="project" id="proj-9" data-project="9" data-cat="infra web automation">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-9-detail">
-            <span class="project__no">09</span>
+        <!-- 07 -->
+        <li class="project" id="proj-7" data-project="7" data-cat="infra web automation">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-7-detail">
+            <span class="project__no">07</span>
             <span class="project__titles">
               <span class="project__titlerow"><span class="project__title">Client Intake &amp; Proposal Pipeline</span><span class="status status--live">Live</span></span>
               <span class="project__tag">Upload a client document; get a filed client, a linked note, and a print-ready proposal</span>
             </span>
             <span class="project__plus" aria-hidden="true"></span>
           </button>
-          <div class="project__detail" id="proj-9-detail" role="region" aria-label="Client Intake and Proposal Pipeline">
+          <div class="project__detail" id="proj-7-detail" role="region" aria-label="Client Intake and Proposal Pipeline">
             <div class="project__grid">
               <div class="project__prose">
                 <h4>Problem</h4>
@@ -554,17 +491,17 @@
       <p class="pgroup__label">Digital marketing &amp; web</p>
       <ul class="projects">
 
-        <!-- 10 -->
-        <li class="project" id="proj-10" data-project="10" data-cat="web automation">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-10-detail">
-            <span class="project__no">10</span>
+        <!-- 08 -->
+        <li class="project" id="proj-8" data-project="8" data-cat="web automation">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-8-detail">
+            <span class="project__no">08</span>
             <span class="project__titles">
               <span class="project__titlerow"><span class="project__title">Colchones Segunda Itzel &#8212; segundaitzel.mx</span><span class="status status--live">Live</span></span>
               <span class="project__tag">Designed it, shipped it on a CI/CD pipeline, and built the robot that maintains it</span>
             </span>
             <span class="project__plus" aria-hidden="true"></span>
           </button>
-          <div class="project__detail" id="proj-10-detail" role="region" aria-label="Colchones Segunda Itzel">
+          <div class="project__detail" id="proj-8-detail" role="region" aria-label="Colchones Segunda Itzel">
             <div class="project__grid">
               <div class="project__prose">
                 <h4>Problem</h4>
@@ -587,17 +524,17 @@
           </div>
         </li>
 
-        <!-- 11 -->
-        <li class="project" id="proj-11" data-project="11" data-cat="web">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-11-detail">
-            <span class="project__no">11</span>
+        <!-- 09 -->
+        <li class="project" id="proj-9" data-project="9" data-cat="web">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-9-detail">
+            <span class="project__no">09</span>
             <span class="project__titles">
               <span class="project__titlerow"><span class="project__title">RADCO Construction &#8212; Website Refactor</span></span>
               <span class="project__tag">Commercial site rebuilt for local search &#8212; radco.construction</span>
             </span>
             <span class="project__plus" aria-hidden="true"></span>
           </button>
-          <div class="project__detail" id="proj-11-detail" role="region" aria-label="RADCO Construction Website Refactor">
+          <div class="project__detail" id="proj-9-detail" role="region" aria-label="RADCO Construction Website Refactor">
             <div class="project__grid">
               <div class="project__prose">
                 <h4>Problem</h4>
@@ -619,17 +556,17 @@
           </div>
         </li>
 
-        <!-- 12 -->
-        <li class="project" id="proj-12" data-project="12" data-cat="web">
-          <button class="project__head" aria-expanded="false" aria-controls="proj-12-detail">
-            <span class="project__no">12</span>
+        <!-- 10 -->
+        <li class="project" id="proj-10" data-project="10" data-cat="web">
+          <button class="project__head" aria-expanded="false" aria-controls="proj-10-detail">
+            <span class="project__no">10</span>
             <span class="project__titles">
               <span class="project__titlerow"><span class="project__title">UI/UX Prototypes</span></span>
               <span class="project__tag">High-fidelity, interactive Figma prototypes for modern web applications</span>
             </span>
             <span class="project__plus" aria-hidden="true"></span>
           </button>
-          <div class="project__detail" id="proj-12-detail" role="region" aria-label="UI/UX Prototypes">
+          <div class="project__detail" id="proj-10-detail" role="region" aria-label="UI/UX Prototypes">
             <div class="project__grid">
               <div class="project__prose">
                 <h4>Problem</h4>
@@ -672,7 +609,7 @@
            The list below is the no-JS fallback and is replaced on load. -->
       <div class="fleet__fallback">
         <p class="fleet__fallbacknote"><span class="mono">ingest:</span> market data · Google Places / OSM / Reddit · live client sites · ListenBrainz</p>
-        <p class="fleet__fallbacknote"><span class="mono">run:</span> seo-ops · apex-trader · polymarket-bot · leadscout · shorts-clipper · music-stack · Ollama · graphify</p>
+        <p class="fleet__fallbacknote"><span class="mono">run:</span> seo-ops · apex-trader · polymarket-bot · leadscout · shorts-clipper · music-stack · Ollama</p>
         <p class="fleet__fallbacknote"><span class="mono">ship:</span> segundaitzel.mx · dashboard :8080 · Obsidian vault · YouTube drafts · Plexamp</p>
       </div>
     </div>
@@ -696,7 +633,7 @@
         <img class="demo__shot" src="assets/img/demos/crane-hifi-bar.webp" width="1200" height="600" loading="lazy" alt="Crane HIFI Bar demo — listening-bar hero reading Coffee. Cocktails. High Fidelity. over a turntable photo" />
         <span class="demo__body">
           <span class="demo__toprow"><span class="demo__no">01</span><span class="demo__name">Crane HIFI Bar</span><span class="demo__open">open demo &#8599;</span></span>
-          <span class="demo__tag">Listening bar &amp; caf&#233;, Ensenada B.C. &#8212; the coded build of the Crane concept prototyped in Figma (project [12])</span>
+          <span class="demo__tag">Listening bar &amp; caf&#233;, Ensenada B.C. &#8212; the coded build of the Crane concept prototyped in Figma (project [10])</span>
         </span>
       </a>
 
@@ -752,7 +689,7 @@
         <img class="demo__shot" src="assets/img/demos/colchones-segunda-itzel.webp" width="1200" height="750" loading="lazy" alt="Colchones Segunda Itzel demo, concept A — Spanish mattress store hero with WhatsApp button" />
         <span class="demo__body">
           <span class="demo__toprow"><span class="demo__no">08</span><span class="demo__name">Colchones Segunda Itzel &#8212; A</span><span class="demo__open">open demo &#8599;</span></span>
-          <span class="demo__tag">Mattress store, Mexicali B.C. &#8212; the concept that shipped; now live at segundaitzel.mx (project [10])</span>
+          <span class="demo__tag">Mattress store, Mexicali B.C. &#8212; the concept that shipped; now live at segundaitzel.mx (project [08])</span>
         </span>
       </a>
 
@@ -780,41 +717,39 @@
         <div class="sgroup">
           <h3 class="sgroup__label">Languages</h3>
           <p class="sgroup__tags">
-            <button class="skill" data-projects="1 2 3 4 5 6 7 8 9">Python</button>
-            <button class="skill" data-projects="5 6 10">JavaScript</button>
-            <button class="skill" data-projects="10">TypeScript</button>
+            <button class="skill" data-projects="1 2 3 4 5 6 7">Python</button>
+            <button class="skill" data-projects="3 4 8">JavaScript</button>
+            <button class="skill" data-projects="8">TypeScript</button>
             <button class="skill" data-projects="">C</button>
             <button class="skill" data-projects="">Verilog</button>
             <button class="skill" data-projects="2">MATLAB</button>
-            <button class="skill" data-projects="1 6 7">Bash</button>
+            <button class="skill" data-projects="1 4 5">Bash</button>
           </p>
         </div>
         <div class="sgroup">
           <h3 class="sgroup__label">Systems &amp; infrastructure</h3>
           <p class="sgroup__tags">
-            <button class="skill" data-projects="6 7">Linux / Unix</button>
-            <button class="skill" data-projects="6 7">System administration</button>
-            <button class="skill" data-projects="5 9">FastAPI</button>
-            <button class="skill" data-projects="6 7">Docker</button>
-            <button class="skill" data-projects="1 6 7">systemd &amp; cron</button>
-            <button class="skill" data-projects="1 2 4 6 10">Git &amp; GitHub</button>
-            <button class="skill" data-projects="10">GitHub Actions</button>
-            <button class="skill" data-projects="6">Raspberry Pi</button>
-            <button class="skill" data-projects="6">Reverse proxy</button>
-            <button class="skill" data-projects="6">Networking</button>
+            <button class="skill" data-projects="4 5">Linux / Unix</button>
+            <button class="skill" data-projects="4 5">System administration</button>
+            <button class="skill" data-projects="3 7">FastAPI</button>
+            <button class="skill" data-projects="4 5">Docker</button>
+            <button class="skill" data-projects="1 4 5">systemd &amp; cron</button>
+            <button class="skill" data-projects="1 2 4 8">Git &amp; GitHub</button>
+            <button class="skill" data-projects="8">GitHub Actions</button>
+            <button class="skill" data-projects="4">Raspberry Pi</button>
+            <button class="skill" data-projects="4">Reverse proxy</button>
+            <button class="skill" data-projects="4">Networking</button>
           </p>
         </div>
         <div class="sgroup">
           <h3 class="sgroup__label">AI, LLM &amp; automation</h3>
           <p class="sgroup__tags">
-            <button class="skill" data-projects="1 2 3 5">LLM orchestration</button>
-            <button class="skill" data-projects="3">Constrained decoding</button>
-            <button class="skill" data-projects="2 3">Local inference (Ollama)</button>
-            <button class="skill" data-projects="4">Knowledge graphs</button>
+            <button class="skill" data-projects="1 2 3">LLM orchestration</button>
+            <button class="skill" data-projects="2">Local inference (Ollama)</button>
             <button class="skill" data-projects="2">Agent memory &amp; reflection</button>
-            <button class="skill" data-projects="1 2 5 8">Pipeline automation</button>
-            <button class="skill" data-projects="1 5 8">Web scraping</button>
-            <button class="skill" data-projects="2 5 8">API integration</button>
+            <button class="skill" data-projects="1 2 3 6">Pipeline automation</button>
+            <button class="skill" data-projects="1 3 6">Web scraping</button>
+            <button class="skill" data-projects="2 3 6">API integration</button>
           </p>
         </div>
         <div class="sgroup">
@@ -830,16 +765,16 @@
         <div class="sgroup">
           <h3 class="sgroup__label">Digital marketing &amp; web</h3>
           <p class="sgroup__tags">
-            <button class="skill" data-projects="1 10 11">SEO optimization</button>
-            <button class="skill" data-projects="1 10">Core Web Vitals</button>
-            <button class="skill" data-projects="1 10">Schema.org / JSON-LD</button>
-            <button class="skill" data-projects="5">Lead generation</button>
-            <button class="skill" data-projects="1 11">Analytics</button>
-            <button class="skill" data-projects="11">WordPress</button>
-            <button class="skill" data-projects="10 11">HTML / CSS</button>
-            <button class="skill" data-projects="10">React / Vite</button>
-            <button class="skill" data-projects="10 12">Figma / UI-UX</button>
-            <button class="skill" data-projects="12">Design systems</button>
+            <button class="skill" data-projects="1 8 9">SEO optimization</button>
+            <button class="skill" data-projects="1 8">Core Web Vitals</button>
+            <button class="skill" data-projects="1 8">Schema.org / JSON-LD</button>
+            <button class="skill" data-projects="3">Lead generation</button>
+            <button class="skill" data-projects="1 9">Analytics</button>
+            <button class="skill" data-projects="9">WordPress</button>
+            <button class="skill" data-projects="8 9">HTML / CSS</button>
+            <button class="skill" data-projects="8">React / Vite</button>
+            <button class="skill" data-projects="8 10">Figma / UI-UX</button>
+            <button class="skill" data-projects="10">Design systems</button>
           </p>
         </div>
         <div class="sgroup">
@@ -866,16 +801,14 @@
         <div class="about__chips" aria-hidden="false">
           <a class="pchip" data-project="1" href="#proj-1">01 seo-ops</a>
           <a class="pchip" data-project="2" href="#proj-2">02 apex-trader</a>
-          <a class="pchip" data-project="3" href="#proj-3">03 Decoding</a>
-          <a class="pchip" data-project="4" href="#proj-4">04 graphify</a>
-          <a class="pchip" data-project="5" href="#proj-5">05 Leadscout</a>
-          <a class="pchip" data-project="6" href="#proj-6">06 VPS fleet</a>
-          <a class="pchip" data-project="7" href="#proj-7">07 Music</a>
-          <a class="pchip" data-project="8" href="#proj-8">08 Video</a>
-          <a class="pchip" data-project="9" href="#proj-9">09 Intake</a>
-          <a class="pchip" data-project="10" href="#proj-10">10 Itzel</a>
-          <a class="pchip" data-project="11" href="#proj-11">11 RADCO</a>
-          <a class="pchip" data-project="12" href="#proj-12">12 UI/UX</a>
+          <a class="pchip" data-project="3" href="#proj-3">03 Leadscout</a>
+          <a class="pchip" data-project="4" href="#proj-4">04 VPS fleet</a>
+          <a class="pchip" data-project="5" href="#proj-5">05 Music</a>
+          <a class="pchip" data-project="6" href="#proj-6">06 Video</a>
+          <a class="pchip" data-project="7" href="#proj-7">07 Intake</a>
+          <a class="pchip" data-project="8" href="#proj-8">08 Itzel</a>
+          <a class="pchip" data-project="9" href="#proj-9">09 RADCO</a>
+          <a class="pchip" data-project="10" href="#proj-10">10 UI/UX</a>
         </div>
       </aside>
     </div>
@@ -932,7 +865,7 @@
   <div class="keys__panel" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
     <p class="keys__kick">Keyboard map</p>
     <dl class="keys__list">
-      <dt><kbd>&#8984;K</kbd> <span class="keys__or">/</span> <kbd>Ctrl K</kbd> <span class="keys__or">/</span> <kbd>/</kbd></dt><dd>Open search</dd>
+      <dt><kbd>Ctrl K</kbd> <span class="keys__or">/</span> <kbd>/</kbd></dt><dd>Open search</dd>
       <dt><kbd>J</kbd> <kbd>K</kbd></dt><dd>Next / previous project</dd>
       <dt><kbd>&#8629;</kbd></dt><dd>Open the focused project</dd>
       <dt><kbd>E</kbd></dt><dd>Expand or collapse every project</dd>

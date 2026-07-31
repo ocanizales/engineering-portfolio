@@ -299,8 +299,7 @@
       { id: 'sites',   col: 0, name: 'live client sites', sub: 'crawl · Lighthouse',      desc: 'The real, deployed HTML — crawled nightly and scored for performance and SEO.' },
       { id: 'listens', col: 0, name: 'listening history', sub: 'ListenBrainz',            desc: 'Scrobbles leaving the media server, which come back as recommendations.' },
       { id: 'vods',    col: 0, name: 'source video',     sub: 'yt-dlp · 1080p',           desc: 'Long-form footage pulled at a guaranteed 1080p before any cutting.' },
-      { id: 'ollama',  col: 0, name: 'local inference',  sub: 'Ollama · llama3.2:3b',     desc: 'CPU-only language model with schema-constrained decoding. No API bill.' },
-      { id: 'graph',   col: 0, name: 'knowledge graph',  sub: 'graphify · 8 repos',       desc: 'Code and docs as a queryable graph — 3.8× less context per question.' },
+      { id: 'ollama',  col: 0, name: 'local inference',  sub: 'Ollama · CPU-only',        desc: 'A language model running on the box itself — no API key, no per-token bill.' },
       // col 1 — the services
       { id: 'seo',     col: 1, name: 'seo-ops',          sub: 'nightly · 5-check gate',   desc: 'Audits, writes the fix, and gates its own deploy. Fails closed.' },
       { id: 'apex',    col: 1, name: 'apex-trader',      sub: '10 strategies · paper',    desc: 'Walk-forward backtester, optimizer, and a committee that grades its own past calls.' },
@@ -320,7 +319,6 @@
       ['market', 'apex'], ['market', 'poly'], ['places', 'lead'],
       ['sites', 'seo'], ['listens', 'music'], ['vods', 'clip'],
       ['ollama', 'seo', 1], ['ollama', 'apex', 1], ['ollama', 'lead', 1],
-      ['graph', 'seo', 1], ['graph', 'apex', 1], ['graph', 'clip', 1],
       ['seo', 'site'], ['seo', 'vault'], ['apex', 'vault'], ['poly', 'vault'],
       ['clip', 'yt'], ['music', 'plex'],
       ['seo', 'dash', 1], ['apex', 'dash', 1], ['poly', 'dash', 1],
