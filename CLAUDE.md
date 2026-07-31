@@ -36,8 +36,8 @@ EXPERIENCE`), `[NN]` project numbers, `stack:` / `~/` mono affordances, sharp
 ## Architecture (see PROJECT_MAP.md)
 - `index.html` — intro (+ metrics band) → 01 experience (2 year-list tracks)
   → 02 projects (filter bar + 3 groups: "Autonomous systems & AI" 01–05,
-  "Infrastructure & automation" 06–09, "Digital marketing & web" 10–13;
-  13 expandable cards) → 03 systems (SVG fleet map) → 04 demos → 05 stack
+  "Infrastructure & automation" 06–09, "Digital marketing & web" 10–12;
+  12 expandable cards) → 03 systems (SVG fleet map) → 04 demos → 05 stack
   (6 skill groups) → 06 contact. Certs stay in the experience "Learning" track.
   Palette, shortcut overlay, and toast live at the end of `<body>`.
 - `assets/css/styles.css` — token-driven; dark neutral-gray monochrome theme.
@@ -75,7 +75,9 @@ readable document. Do not add interactivity that gates content.
   Pipeline**, and it *does* ship: `engine.intake` + `engine.quote` + the
   dashboard `/intake` page. Deal-stage tracking still isn't built — don't claim it.
 - apex-trader and polymarket-bot are **paper only**. Never imply live capital.
-- Live client sites: segundaitzel.mx, radco.construction, imperialfamilylaw.com.
+- Live client sites: segundaitzel.mx, radco.construction.
+- **Imperial Family Law was removed at the user's request (2026-07-31).** Do not
+  reintroduce it, and do not cite imperialfamilylaw.com anywhere.
 
 ## Source of truth for content
 Two resumes: `..job_docs/oscar_canizales_engineering_resume.pdf` (primary) and

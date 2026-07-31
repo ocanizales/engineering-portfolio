@@ -3,7 +3,8 @@
 _Last updated: 2026-07-31_
 
 ## Status
-**v5 — content refresh + interactive layer. Browser-verified, 48/48 checks.**
+**v5 — content refresh + interactive layer, Imperial Family Law removed.
+Browser-verified, 64/64 checks.**
 
 ## v5 (2026-07-31) — new work, and an interactive layer
 User asked to "update my portfolio with relevant projects / achievements" and
@@ -21,7 +22,8 @@ sourced from the repos themselves rather than memory:
 - **04 graphify**, **05 Leadscout**, **06 VPS fleet**, **07 music pipeline**,
   **08 video pipeline**, **09 client intake** (the old "CRM — In progress" card,
   now honestly reframed around what actually ships), **10 segundaitzel.mx**.
-- 11–13 are the old RADCO / Imperial / UI-UX cards, renumbered.
+- 11–12 are the old RADCO / UI-UX cards, renumbered. (Imperial Family Law was
+  removed later the same day at the user's request — see below.)
 - New **metrics band** under the intro. Numbers are counted, not estimated —
   16 repos, 303 commits, 662 test functions, 4 unattended changes, SEO 100, 3.8×.
 - New experience row: independent web & systems work (2025–).
@@ -62,6 +64,25 @@ errors. Overflow audited at 360/390/414/768/820/1024/1440px.
   detour — the page was fine, the capture wasn't.
 - Filter counts in the HTML are hand-maintained; recount when categories change.
 - The metrics band is résumé-grade content. Recount from the repos before editing.
+
+## 2026-07-31 (later) — Imperial Family Law removed
+User: "remove imperial law website from the portfolio as a whole." Card 12 was
+excised, the UI/UX card renumbered 13 -> 12, its `.pchip` dropped and the UI/UX
+chip renumbered, and every `data-projects` mapping remapped (12 dropped, 13 -> 12).
+Filter counts updated: all 13 -> 12, web 7 -> 6. The demos section's
+"prototyped in Figma (project [13])" cross-reference now points at [12].
+
+Skills that lost their only other referent: **WordPress** now maps to RADCO alone,
+**Lead generation** to Leadscout alone. Both still map to something, so no chip is
+orphaned - worth rechecking if RADCO ever goes too.
+
+Careful: `index.html` still contains "Imperial CA" in the Sun Dental demo card.
+That is the city in California, not the law firm. Leave it.
+
+Re-verified: **64/64**. The harness gained checks that would have caught this
+class of mistake earlier: every filter's *printed* count is now asserted against
+the live row count, no `.pchip` or `.skill` may point at a missing `#proj-N`, and
+"Imperial" must be absent everywhere except the Sun Dental city.
 
 ## (v4 + demo gallery retained below)
 
