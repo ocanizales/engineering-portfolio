@@ -1,8 +1,71 @@
 # HANDOFF.md — engineering-portfolio
 
-_Last updated: 2026-07-16_
+_Last updated: 2026-07-31_
 
 ## Status
+**v5 — content refresh + interactive layer. Browser-verified, 48/48 checks.**
+
+## v5 (2026-07-31) — new work, and an interactive layer
+User asked to "update my portfolio with relevant projects / achievements" and
+make it "more creative and interactive". The site had drifted ~2 weeks behind
+the actual work.
+
+**Content.** Projects went 8 → 13, regrouped into three blocks. New cards, all
+sourced from the repos themselves rather than memory:
+- **01 seo-ops** (flagship, `.project--flag`) — the nightly SEO engine, its
+  five-check gate, and the **4 gate-passed changes it shipped unattended** to
+  segundaitzel.mx. Verified from `sites/segundaitzel.mx/changelog.csv`.
+- **02 apex-trader** — 10 strategies, the optimizer, and the committee memory
+  loop. `+0.72R / PF 2.55` verified in `docs/statarb_research.md:108`.
+- **03 Constrained decoding** — the 0/4 → 4/4 JSON-schema result on llama3.2:3b.
+- **04 graphify**, **05 Leadscout**, **06 VPS fleet**, **07 music pipeline**,
+  **08 video pipeline**, **09 client intake** (the old "CRM — In progress" card,
+  now honestly reframed around what actually ships), **10 segundaitzel.mx**.
+- 11–13 are the old RADCO / Imperial / UI-UX cards, renumbered.
+- New **metrics band** under the intro. Numbers are counted, not estimated —
+  16 repos, 303 commits, 662 test functions, 4 unattended changes, SEO 100, 3.8×.
+- New experience row: independent web & systems work (2025–).
+- Stack section: 5 groups → 6, added AI/LLM and Quantitative.
+
+**Interactive layer** (all vanilla, still no build step):
+command palette (`⌘K`/`/`), keyboard map (`?`), `j`/`k`/`e`/`f`/`g`+letter
+shortcuts, project filters, an SVG fleet map generated from a data structure,
+metric count-up, scroll-progress hairline, pointer-tracked grid light,
+copy-to-clipboard on contacts, deep links that open the row they point at.
+
+**Verified in headless Chromium**, 48/48 assertions: filters (every visible row
+carries the tag, for all 5 categories), palette ranking and empty states,
+accordion + aria-expanded, all keyboard paths, fleet tracing (6 lit edges on
+seo-ops, both directions in the readout), skill pinning, deep links, zero runtime
+errors. Overflow audited at 360/390/414/768/820/1024/1440px.
+
+### Bugs found and fixed during verification
+- **Filter taxonomy was wrong.** Hand-written counts didn't match `data-cat`,
+  and "autonomous" tagged 9 of 13 rows, which narrows nothing. Recut to
+  web 7 / ai 6 / automation 6 / infra 4 / trading 2.
+- **Palette ranked a skill chip above the project.** Scoring ran subsequence
+  matching over the whole description, so long entries were penalised by length
+  and "seo" surfaced "SEO optimization" over "seo-ops". Now: subsequence on the
+  label only, substring on the body, per-kind boost. Subsequence over long body
+  text also made junk like `walkforward` match everything.
+- **5px horizontal overflow at 360px** from `.ln { white-space: nowrap }` — fine
+  for the old short link text, not for the new intro's longer phrases. The rule
+  is gone and the underline is `text-decoration` now, because the old absolute
+  `::after` would only underline the first line box of a wrapped link.
+- **Filter double-click race** — a stale 400ms timer could land `hidden` on a row
+  that had since been re-shown. Timer is now per-element and cleared.
+
+### Gotchas for the next session
+- `--virtual-time-budget` **does not advance CSS transitions**. Screenshots come
+  out mid-fade and `getComputedStyle` reports `opacity: 0` on revealed elements.
+  Use `--force-prefers-reduced-motion` for visual checks. This cost a debugging
+  detour — the page was fine, the capture wasn't.
+- Filter counts in the HTML are hand-maintained; recount when categories change.
+- The metrics band is résumé-grade content. Recount from the repos before editing.
+
+## (v4 + demo gallery retained below)
+
+## Status at v4
 **v4 + client demo gallery. Screenshot-verified.**
 
 ## Demo gallery (2026-07-16)
